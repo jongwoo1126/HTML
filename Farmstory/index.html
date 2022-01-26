@@ -139,7 +139,7 @@
         main > .info{
             overflow: hidden;
             height: 154px;
-            border-top: 2px solid #756c65;
+            border-top: 2.5px solid #756c65;
             padding: 10px 0 ;
             box-sizing: border-box;
         }
@@ -148,12 +148,45 @@
             height: 100%;
         }   
         main > .info > div:nth-child(1){
+            position: relative;
             width: 386px;
+            
+        }
+        main > .info > div:nth-child(1) > img{}
+        main > .info > div:nth-child(1) > div:nth-of-type(1){
+            padding-top: 15px;
+            padding-left: 5px;
+        }
+        main > .info > div:nth-child(1) > div:nth-of-type(1) > img:nth-child(1){
+            padding-right: 10px;
+        }
+        main > .info > div:nth-child(1) > p{
+            position: absolute;
+            top: 32px;
+            right: 28px;
+            font: normal 11px '돋움';
+            color: #666;
+            line-height: 15px;
+        }
+        main > .info > div:nth-child(1) > div:nth-of-type(2){
+            margin-top: 13px;
         }
         main > .info > div:nth-child(2){
             width: 230px;
+            padding-left: 25px;
             border-left: 1px solid #d7d7d7;
             border-right: 1px solid #d7d7d7;
+            box-sizing: border-box;
+        }
+        main > .info > div:nth-child(2) > img{
+            width: 49px;
+            height: 14px;
+        }
+        main > .info > div:nth-child(2) > p{
+            margin-top: 15px;
+            line-height: 18px;
+            font-size: 11px;
+            color: #666;
         }
         main > .info > div:nth-child(3){
             width: 360px;
@@ -215,8 +248,34 @@
                 <article></article>
             </div>
             <div class="info">
-                <div></div>
-                <div></div>
+                <div>
+                    <img src="./img/main_sub2_cs_tit.png" alt="고객센터 안내">
+                    <div>
+                        <img src="./img/main_sub2_cs_img.png" alt="고객센터">
+                        <img src="./img/main_sub2_cs_txt.png" alt="전화번호">
+                    </div>
+                    <p>
+                        평일: AM 09:00 ~ PM 06:00 <br>
+                        점심: PM 12:00 ~ PM 01:00 <br>
+                        토, 일요일, 공휴일 휴무 <br>
+                    </p>
+                    <div>
+                        <a href="#"><img src="./img/main_sub2_cs_bt1.png" alt="고객문의"></a>
+                        <a href="#"><img src="./img/main_sub2_cs_bt2.png" alt="자주묻는 질문"></a>
+                        <a href="#"><img src="./img/main_sub2_cs_bt3.png" alt="배송조회"></a>
+                    </div>
+                </div>
+                <div>
+                    <img src="./img/main_sub2_account_tit.png" alt="계좌안내">
+                    <p>
+                        기업은행 123-456789-01-01-012 <br>
+                        국민은행 01-1234-56789 <br>
+                        우리은행 123-456789-01-01-012 <br>
+                        하나은행 123-456789-01-01 <br>
+                        예금주 (주)팜스토리
+                    </p>
+                    
+                </div>
                 <div></div>
             </div>
         </main>
