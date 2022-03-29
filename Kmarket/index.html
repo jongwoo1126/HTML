@@ -3,240 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <title>케이마켓::대한민국 1등 쇼핑몰</title>
-    <style>
-        /* 초기화 */
-        *{
-            margin: 0;
-            padding: 0;
-            font: normal 12px '돋움';
-        }
-
-        ul, ol{list-style: none;}
-        a{text-decoration: none; color: #111;}
-        input, textarea{outline: none;}
-
-        #wrapper{
-            width: 100%;
-            height: auto;
-        }
-
-        /* 헤더 */
-        header{
-            width: 100%;
-            height: 197px;
-        }
-
-        header > div{
-            width: 100%;
-            box-sizing: border-box;
-        }
-
-        header > div:nth-child(1){
-            height: 35px;
-            border-bottom: 1px solid #e9e9e9;
-            overflow: hidden;
-        }
-        header > div:nth-child(1) > div > div{
-            float: right;
-            height: 100%;
-            border-left: 1px solid #e9e9e9;
-        }
-        header > div:nth-child(1) > div > div > a{
-            display: inline-block;
-            padding: 0 10px;
-            line-height: 35px;
-            color: #646464;
-        }
-        
-        header > div:nth-child(1) > div > div > a:last-child{
-            border-right: 1px solid #e9e9e9;
-        }
-
-        header > div:nth-child(1) > div > div > a:hover{
-            color: #333;
-            border-bottom: 1px solid #444;  
-        }
-
-        header > div:nth-child(2){height: 115px;}
-        header > div:nth-child(3){
-            height: 46px;
-            background: #f2f2f2;
-            border-top: 1px solid #ddd;
-            border-bottom: 1px solid #ddd;
-            box-sizing: border-box;
-        }
-
-        header > div:nth-child(3) > div{
-            overflow: hidden;
-            width: 1200px;
-            height: 100%;
-            padding: 15px 0;
-            margin: 0 auto;
-            box-sizing: border-box;
-        }
-        
-        header > div:nth-child(3) > div > div{
-            line-height: 14px;
-            border-right: 1px solid #ddd;
-        }
-
-        header > div:nth-child(3) > div > div:first-child{
-            border-left: 1px solid #ddd;
-        }
-
-        header > div:nth-child(3) > div > div:nth-child(10){
-            border-left: 1px solid #ddd;
-        }
-
-        header > div:nth-child(3) > div > div.right{
-            float: right;
-        }
-        header > div:nth-child(3) > div > div.left{
-            float: left;
-        }
-
-        header > div:nth-child(3) > div > div > a{
-            padding: 0 10px;
-        }
-
-        header > div > div{
-            width: 1200px;
-            height: 100%;
-            box-sizing: border-box;
-            margin: 0 auto;
-        }
-
-        /* 푸터 */
-        footer{
-            width: 100%;
-            height: 192px;
-            border-top: 1px solid #e9e9e9;
-            background: #f8f8f8;
-            box-sizing: border-box;
-        }
-
-        /* 메인(index.html) */
-        main{
-            position: relative;
-            width: 1200px;
-            min-height: 600px;
-            margin: 0 auto;
-            overflow: hidden;
-        }
-
-        main > aside{
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 215px;
-            height: 100%;
-            border: 1px solid blue;
-        }
-
-        main > aside > ul{
-            height: 425px;
-            padding-top: 10px;
-            background: #333949;
-            box-sizing: border-box;
-        }
-
-        main > aside > ul > li{
-            width: 100%;
-            height: 40px;
-            padding: 0 20px;
-            line-height: 40px;
-            border-bottom: 1px solid #2b313f;
-            color: #fff;
-            font-weight: bold;
-            text-align: left;
-            font-size: 1em;
-            box-sizing: border-box;
-        }
-        main > aside > ul > li > a{
-            color: #ccc;
-        }
-
-        main > section{
-            float: right;
-            width: 985px;
-            height: 100%;
-            border: 1px solid red;
-            box-sizing: border-box;
-        }
-        
-        main > section > section{
-            width: 100%;
-            min-height: 700px;
-            padding: 10px;
-            border: 1px solid blue;
-            box-sizing: border-box;
-            overflow: hidden;
-        }
-        
-        main > section > section > h1 > a{
-            font-weight: bold;
-            font-size: 1.5em;
-            font-family: 'Malgun Gothic', dotum, sans-serif;
-            margin: 10px;
-            padding: 0 0 7px;
-            border-bottom: 2px solid #000;
-            line-height: 1em;
-        }
-
-        main > section > section > article > a > h2{
-            font-family: 'Noto Sans KR', sans-serif;
-            font-size: 15px;
-            margin-top: 4px;
-            text-align: center;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-            overflow: hidden;
-        }
-
-        main > section > section > article > a > p{
-            color: #222;
-            font-size: 12px;
-            line-height: 16px;
-            margin: 4px 0;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-            overflow: hidden;
-        }
-
-        main > section > section > article{
-            float: left;
-            width: 25%;
-            min-height: 300px;
-        }
-
-        main > section > section > article > a{
-            width: 100%;
-            height: 100%;
-            padding: 10px;
-            box-sizing: border-box;
-        }
-
-        main > section > .slider{
-            min-height: initial;
-            height: 425px;
-        }
-
-    </style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-
     <div id="wrapper">
         <header>
             <div>
                 <div>
-                    <div><a href="#">장바구니</a></div>
+                    <div><a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;장바구니</a></div>
                     <div><a href="#">마이페이지</a></div>
                     <div><a href="#">회원가입</a></div>
                     <div><a href="#">로그인</a></div>
                 </div>
             </div>
             <div>
-                <div></div>
+                <div>
+                    <a href="#"><img src="./img/header_logo.png" alt="로고"/></a>
+                    <form action="#">
+                        <input type="text" name="search"/>
+                        <button><i class="fa fa-search"></i></button>
+                    </form> 
+                </div>
             </div>
             <div>
                 <div>
@@ -294,18 +83,18 @@
                     <h1>베스트 상품</h1>
                 </article>
             </aside>
-            <section>
+            <section id="main">
                 <section class="slider"></section>
                 <section class="hit">
                     <h1><a href="#">히트상품</a></h1>
                         <article>
-                            <a href="">
+                            <a href="#">
                                 <div><img src="./img/thumb-sample-t1.jpg" alt="t1"></div>
                                 <h2>베이직 기모 레글런 차콜레드2 차콜레드2</h2>
                                 <p>신상 긴풀 티셔츠/남자옷 무지티 티셔츠/남자옷 무지티 티셔츠</p>
                                 <div>
                                     <del>30,000</del>
-                                    <span>10%</span>
+                                    <span>10%↓</span>
                                 </div>
                                 <div>
                                     <ins>27,000</ins>
@@ -314,13 +103,13 @@
                             </a>
                         </article>
                         <article>
-                            <a href="">
+                            <a href="#">
                                 <div><img src="./img/thumb-sample-t1.jpg" alt="t1"></div>
                                 <h2>베이직 기모 레글런 차콜레드2 차콜레드2</h2>
                                 <p>신상 긴풀 티셔츠/남자옷 무지티 티셔츠/남자옷 무지티 티셔츠</p>
                                 <div>
                                     <del>30,000</del>
-                                    <span>10%</span>
+                                    <span>10↓</span>
                                 </div>
                                 <div>
                                     <ins>27,000</ins>
@@ -329,13 +118,13 @@
                             </a>
                         </article>
                         <article>
-                            <a href="">
+                            <a href="#">
                                 <div><img src="./img/thumb-sample-t1.jpg" alt="t1"></div>
                                 <h2>베이직 기모 레글런 차콜레드2 차콜레드2</h2>
                                 <p>신상 긴풀 티셔츠/남자옷 무지티 티셔츠/남자옷 무지티 티셔츠</p>
                                 <div>
                                     <del>30,000</del>
-                                    <span>10%</span>
+                                    <span>10↓</span>
                                 </div>
                                 <div>
                                     <ins>27,000</ins>
@@ -344,13 +133,13 @@
                             </a>
                         </article>
                         <article>
-                            <a href="">
+                            <a href="#">
                                 <div><img src="./img/thumb-sample-t1.jpg" alt="t1"></div>
                                 <h2>베이직 기모 레글런 차콜레드2 차콜레드2</h2>
                                 <p>신상 긴풀 티셔츠/남자옷 무지티 티셔츠/남자옷 무지티 티셔츠</p>
                                 <div>
                                     <del>30,000</del>
-                                    <span>10%</span>
+                                    <span>10↓</span>
                                 </div>
                                 <div>
                                     <ins>27,000</ins>
@@ -359,13 +148,13 @@
                             </a>
                         </article>
                         <article>
-                            <a href="">
+                            <a href="#">
                                 <div><img src="./img/thumb-sample-t1.jpg" alt="t1"></div>
                                 <h2>베이직 기모 레글런 차콜레드2 차콜레드2</h2>
                                 <p>신상 긴풀 티셔츠/남자옷 무지티 티셔츠/남자옷 무지티 티셔츠</p>
                                 <div>
                                     <del>30,000</del>
-                                    <span>10%</span>
+                                    <span>10↓</span>
                                 </div>
                                 <div>
                                     <ins>27,000</ins>
@@ -374,13 +163,13 @@
                             </a>
                         </article>
                         <article>
-                            <a href="">
+                            <a href="#">
                                 <div><img src="./img/thumb-sample-t1.jpg" alt="t1"></div>
                                 <h2>베이직 기모 레글런 차콜레드2 차콜레드2</h2>
                                 <p>신상 긴풀 티셔츠/남자옷 무지티 티셔츠/남자옷 무지티 티셔츠</p>
                                 <div>
                                     <del>30,000</del>
-                                    <span>10%</span>
+                                    <span>10↓</span>
                                 </div>
                                 <div>
                                     <ins>27,000</ins>
@@ -389,13 +178,13 @@
                             </a>
                         </article>
                         <article>
-                            <a href="">
+                            <a href="$">
                                 <div><img src="./img/thumb-sample-t1.jpg" alt="t1"></div>
                                 <h2>베이직 기모 레글런 차콜레드2 차콜레드2</h2>
                                 <p>신상 긴풀 티셔츠/남자옷 무지티 티셔츠/남자옷 무지티 티셔츠</p>
                                 <div>
                                     <del>30,000</del>
-                                    <span>10%</span>
+                                    <span>10%↓</span>
                                 </div>
                                 <div>
                                     <ins>27,000</ins>
@@ -404,13 +193,13 @@
                             </a>
                         </article>
                         <article>
-                            <a href="">
+                            <a href="#">
                                 <div><img src="./img/thumb-sample-t1.jpg" alt="t1"></div>
                                 <h2>베이직 기모 레글런 차콜레드2 차콜레드2</h2>
                                 <p>신상 긴풀 티셔츠/남자옷 무지티 티셔츠/남자옷 무지티 티셔츠</p>
                                 <div>
                                     <del>30,000</del>
-                                    <span>10%</span>
+                                    <span>10%↓</span>
                                 </div>
                                 <div>
                                     <ins>27,000</ins>
@@ -454,7 +243,31 @@
                 </section>
             </section>
         </main>
-        <footer></footer>
+        <footer>
+            <ul>
+                <li><a href="#">회사소개</a></li>
+                <li><a href="#">서비스이용약관</a></li>
+                <li><a href="#">개인정보처리방침</a></li>
+                <li><a href="#">전자금융거래약관</a></li>
+            </ul>
+            <div>
+                <p><img src="./img/footer_logo.png" alt="로고"></p>
+                <p>
+                  <strong>(주)KMARKET</strong><br />
+                  부산시 강남구 테헤란로 152 (역삼동 강남파이낸스센터)<br />
+                  대표이사 : 홍길동<br />
+                  사업자등록번호 : 220-81-83676 사업자정보확인<br />
+                  통신판매업신고 : 강남 10630호 Fax : 02-589-8842
+                </p>
+                <p>
+                  <strong>고객센터</strong><br />
+                  Tel : 1234-5678 (평일 09:00~18:00)<br />
+                  스마일클럽/SVIP 전용 : 1522-5700 (365일 09:00~18:00)<br />
+                  경기도 부천시 원미구 부일로 223(상동) 투나빌딩 6층<br />
+                  Fax : 051-123-4567 | Mail : kmarket@kmarket.co.kr<br />
+                </p>
+              </div>              
+        </footer>
     </div>
 </body>
 </html>
