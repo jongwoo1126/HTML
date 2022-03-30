@@ -7,6 +7,201 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
 </head>
+<style>
+    /* 상품 주문(order) */
+    #product-order{}
+
+    #product-order > section{
+        width: 100%;
+        box-sizing: border-box;
+    }
+    #product-order > section > form{}
+    #product-order > section > form > div > table{
+        width: 100%;
+        border-collapse: collapse;
+        border-spacing: 0;
+        margin-top: 20px;
+    }
+    #product-order > section > form > div > table >thead{}
+    #product-order > section > form > div > table >thead > tr{}
+    #product-order > section > form > div > table >thead > tr > th{
+        padding: 12px 0;
+        border-top: 2px solid #000;
+        border-bottom: 1px solid #d3d3d3;
+        color: #383838;
+        font-size: 0.95em;
+        text-align: center;
+        letter-spacing: -0.1em;
+    }
+    #product-order > section > form > div > table > tbody{}
+    #product-order > section > form > div > table > tbody > tr{
+        border-bottom: 1px solid #d3d3d3;
+    }
+    #product-order > section > form > div > table > tbody > .empty{display: none;}
+    #product-order > section > form > div > table > tbody > tr > td{text-align: center;}
+    #product-order > section > form > div > table > tbody > tr > td > article{overflow: hidden;}
+    #product-order > section > form > div > table > tbody > tr > td > article > a{float: left;}
+    #product-order > section > form > div > table > tbody > tr > td > article > a > img{width: 80px;}
+    #product-order > section > form > div > table > tbody > tr > td > article > div{
+        float: left;
+        margin-top: 10px;
+    }
+    #product-order > section > form > div > table > tbody > tr > td > article > div > h2{}
+    #product-order > section > form > div > table > tbody > tr > td > article > div > h2 > a{
+        font-size: 15px;
+        font-family: 'Malgun Gothic', dotum, sans-serif;
+    }
+    #product-order > section > form > div > table > tbody > tr > td > article > div > p{
+        text-align: left;
+        color: #777;
+        margin-top: 4px;
+    }
+    #product-order > section > form > div > table > tbody > tr > td:nth-child(8){
+        color: #ff006c;
+        font-weight: bold;
+    }
+
+    #product-order > section > form > section{
+        position: relative;
+        width: 100%;
+        height: auto;
+        margin-top: 10px;
+    }
+    #product-order > section > form > section > article{
+        width: 560px;
+        height: auto;
+        margin-bottom: 10px;
+    }
+    #product-order > section > form > section > article:nth-child(4){
+        background-color: #f7f7f7;
+        padding: 6px;
+        padding-left: 20px;
+        color: #999;
+        box-sizing: border-box;
+    }
+    #product-order > section > form > section > article > h1{
+        font-weight: bold;
+        font-size: 14px;
+        padding: 6px 0;
+        border-bottom: 1px solid #111;
+    }
+    #product-order > section > form > section > article > div{
+        padding: 6px;
+        box-sizing: border-box;
+    }
+    #product-order > section > form > section > article > div > label{
+        display: block;
+        padding: 4px 0;
+    }
+    #product-order > section > form > section > article > div > label > input{
+        color: #555;
+        font-weight: bold;
+        outline: none;
+        padding: 2px 0;
+    }
+    #product-order > section > form > section > article:nth-child(1) > div:nth-child(2) > label:nth-child(2) > span{
+        margin-left: 10px;
+        color: #888;
+    }
+    #product-order > section > form > section > article:nth-child(1) > div:nth-child(3) > label:nth-child(1) > input:nth-child(2){
+        padding: 4px 6px;
+        border: 1px solid #ccc;
+        background-color: #f0f4f9;
+        border-color: #acc0e0;
+        color: #3371c9;
+        outline: none;
+    }
+    #product-order > section > form > section > article:nth-child(1) > div:nth-child(3) > label:nth-child(2) > input{width: 400px;}
+    #product-order > section > form > section > article:nth-child(1) > div:nth-child(3) > label:nth-child(3) > input{width: 400px;}
+    #product-order > section > form > section > article:nth-child(2) > div{}
+    #product-order > section > form > section > article:nth-child(2) > div > p{float: left;}
+    #product-order > section > form > section > article:nth-child(2) > div > p > span{}
+    #product-order > section > form > section > article:nth-child(2) > div > label{float: right;}
+    #product-order > section > form > section > article:nth-child(2) > div > label > input:nth-child(1){
+        display: inline-block;
+        outline: none;
+    }
+    #product-order > section > form > section > article:nth-child(2) > div > label > input:nth-child(2){
+        padding: 4px 6px;
+        border: 1px solid #ccc;
+        background-color: #f0f4f9;
+        border-color: #acc0e0;
+        color: #3371c9;
+        outline: none;
+    }
+    #product-order > section > form > section > article:nth-child(2) > div > span{
+        display: block;
+        margin-top: 20px;
+        color: #888;
+    }
+    #product-order > section > form > section > article:nth-child(3) > div{margin-bottom: 10px;}
+    #product-order > section > form > section > article:nth-child(3) > div > span{
+        display: inline-block;
+        color: #3a85c8;
+        margin: 6px 0;
+    }
+    #product-order > section > form > section > article:nth-child(3) > div > p{}
+    #product-order > section > form > section > article:nth-child(3) > div > p > label{margin-right: 16px;}
+    #product-order > section > form > section > article:nth-child(3) > div > p > label > input{
+        vertical-align: bottom;
+        margin-right: 4px;
+    }
+
+    #product-order > section > form > section > article > div > label > span{}
+    #product-order > section > form > section > article > ul{list-style: inherit;}
+    #product-order > section > form > section > article > ul > li{line-height: 20px;}
+    #product-order > section > form > section > article > ul > li > span{left: -6px;}
+
+    #product-order > section > form > section > div{
+        position: absolute;
+        right: 0;
+        top: 26px;
+        width: 360px;
+        height: 412px;
+        padding: 20px;
+        background: #fff;
+        border: 1px solid #d3d3d3;
+        box-sizing: border-box;
+    }
+    #product-order > section > form > section > div *{font-weight: bold;}
+    #product-order > section > form > section > div > h2{
+        width: 100%;
+        font-weight: bold;
+        font-size: 16px;
+        border-bottom: 1px solid #111;
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+        box-sizing: border-box;
+        color: #1e1e1e;
+    }
+    #product-order > section > form > section > div > table{width: 100%;}
+    #product-order > section > form > section > div > table > tr{}
+    #product-order > section > form > section > div > table td{
+        padding: 10px 0;
+        font-size: 14px;
+        color: #555;
+    }
+    #product-order > section > form > section > div > table > tbody > tr:nth-child(6) > td:nth-child(1){font-size: 20px;}
+    #product-order > section > form > section > div > table td:nth-child(2){text-align: right;}
+    #product-order > section > form > section > div > table > tbody > tr:nth-child(6) > td:nth-child(2){
+        color: #ff006c;
+        font-size: 20px;
+        font-weight: bold;
+    }
+    #product-order > section > form > section > div > input{
+        width: 100%;
+        height: 56px;
+        font-size: 26px;
+        border-width: 1px;
+        border-color: #d81818;
+        border-bottom-color: #9e1212;
+        background-image: -webkit-linear-gradient(#ed2f2f,#dd0e0e);
+        color: #fff;
+        box-sizing: border-box;
+        margin-top: 10px;
+}
+
+</style>
 <body>
     <div id="wrapper">
         <header>
@@ -20,7 +215,7 @@
             </div>
             <div>
                 <div>
-                    <a href="#"><img src="./img/header_logo.png" alt="로고"/></a>
+                    <a href="#"><img src="../img/header_logo.png" alt="로고"/></a>
                     <form action="#">
                         <input type="text" name="search"/>
                         <button><i class="fa fa-search"></i></button>
@@ -85,8 +280,181 @@
                 </article>
             </aside>
             <section id="product-order">
-
-                
+                <!-- 제목, 페이지 네비게이션 -->
+                <nav>
+                    <h1>주문결제</h1>
+                    <p>
+                        HOME > <span>장바구니</span> > <strong>주문결제</strong>
+                    </p>
+                </nav>
+                <section>
+                    <form action="#">
+                        <!-- 주문 상품 목록 -->
+                        <div>
+                            <table border="0">
+                                <thead>
+                                    <tr>
+                                        <th>상품명</th>
+                                        <th>총수량</th>
+                                        <th>판매가</th>
+                                        <th>할인</th>
+                                        <th>포인트</th>
+                                        <th>배송비</th>
+                                        <th>소계</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="empty">
+                                        <td colspan="7">장바구니에 상품이 없습니다.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <article>
+                                                <a href="#"><img src="../img/thumb-sample-t2.jpg" alt="t2"></a>
+                                                <div>
+                                                    <h2><a href="#">TH-블락체크 셔츠-그레이2 [면세]</a></h2>
+                                                    <p>SIZE:M / COLOR:블루 1개</p>
+                                                </div>
+                                            </article>
+                                        </td>
+                                        <td>1</td>
+                                        <td>27,000</td>
+                                        <td>10%</td>
+                                        <td>270</td>
+                                        <td>2,500</td>
+                                        <td>29,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <article>
+                                                <a href="#"><img src="../img/thumb-sample-t3.jpg" alt="t3"></a>
+                                                <div>
+                                                    <h2><a href="#">TH-블락체크 셔츠-그레이2 [면세]</a></h2>
+                                                    <p>SIZE:M / COLOR:블루 1개</p>
+                                                </div>
+                                            </article>
+                                        </td>
+                                        <td>1</td>
+                                        <td>27,000</td>
+                                        <td>10%</td>
+                                        <td>270</td>
+                                        <td>2,500</td>
+                                        <td>29,000</td>
+                                    </tr>
+                                </tbody>
+    
+                            </table>
+                        </div>
+                        <!-- 결제 정보 입력 -->
+                        <section>
+                            <article>
+                                <h1>배송정보</h1>
+                                <div>
+                                    <label>
+                                        주문자 <input type="text" name="name">
+                                    </label>
+                                    <label>
+                                        휴대폰 <input type="text" name="hp">
+                                        <span>- 포함입력</span>
+                                    </label>
+                                </div>
+                                <div>
+                                    <label>
+                                        우편번호
+                                        <input type="text" name="zip" value="54321">
+                                        <input type="button" value="검색">
+                                    </label>
+                                    <label>
+                                        기본주소 <input type="text" name="addr1" class="addr" value="부산광역시 부산진구 신천대로 123">
+                                    </label>
+                                    <label>
+                                        상세주소 <input type="text" name="addr2" class="addr" value="더조은직업학교 5층 501호">
+                                    </label>
+                                </div>
+                            </article>
+                            <article>
+                                <h1>할인정보</h1>
+                                <div>
+                                    <p>
+                                        현재 포인트 : <span>7200</span>점
+                                    </p>
+                                    <label>
+                                        <input type="text" name="point">점
+                                        <input type="button" value="적용">
+                                    </label>
+                                    <span>포인트 5,000점 이상이면 현금처럼 사용 가능합니다.</span>
+                                </div>
+                            </article>
+                            <article>
+                                <h1>결제방법</h1>
+                                <div>
+                                    <span>신용카드</span>
+                                    <p>
+                                        <label><input type="radio" name="payment" value="type1">신용카드 결제</label>
+                                        <label><input type="radio" name="payment" value="type2">체크카드 결제</label>
+                                    </p>
+                                </div>
+                                <div>
+                                    <span>계좌이체</span>
+                                    <p>
+                                        <label><input type="radio" name="payment" value="type3">실시간 계좌이체</label>
+                                        <label><input type="radio" name="payment" value="type4">무통장 입금</label>
+                                    </p>
+                                </div>
+                                <div>
+                                    <span>기타</span>
+                                    <p>
+                                        <label><input type="radio" name="payment" value="type1">휴대폰 결제</label>
+                                        <label><input type="radio" name="payment" value="type2">카카오페이<img src="../img/ico_kakaopay.gif" alt="카카오페이"></label>
+                                    </p>
+                                </div>
+                            </article>
+                            <article>
+                                <ul>
+                                    <li>
+                                        <span>케이마켓의 모든 판매자는 안전거래를 위해 구매금액, 결제수단에 상관없이 모든거래에 대하여 케이마켓 유한책임회사의 구매안전서비스(에스크로)를 제공하고 있습니다.</span>
+                                    </li>
+                                    <li>
+                                        <span>케이마켓 유한책임회사의 전자금융거래법에 의해 결제대금예치업 등록번호는 02-006-00008 입니다.</span>
+                                    </li>
+                                    <li>
+                                        <span>등록여부는 금융감독원 홈페이지(www.fss.or.kr)의 업무자료>인허가업무안내>전자금융업등록현황에서 확인하실수 있습니다.</span>
+                                    </li>
+                                </ul>
+                            </article>
+                            <div class="total">
+                                <h2>전체합계</h2>
+                                <table border="0">
+                                    <tr>
+                                        <td>상품수</td>
+                                        <td>1</td>
+                                    </tr>
+                                    <tr>
+                                        <td>상품금액</td>
+                                        <td>27,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>할인금액</td>
+                                        <td>-1,000</td>
+                                    </tr>
+                                    <tr>
+                                        <td>배송비</td>
+                                        <td>2,500</td>
+                                    </tr>
+                                    <tr>
+                                        <td>포인트</td>
+                                        <td>270</td>
+                                    </tr>
+                                    <tr>
+                                        <td>전체주문금액</td>
+                                        <td>29,000</td>
+                                    </tr>
+                                </table>
+                                <input type="button" name="order" value="주문하기">
+                            </div>
+                        </section>
+                    </form>
+                </section>
             </section>
 
         </main>
@@ -99,7 +467,7 @@
                 <li><a href="#">전자금융거래약관</a></li>
             </ul>
             <div>
-                <p><img src="./img/footer_logo.png" alt="로고"></p>
+                <p><img src="../img/footer_logo.png" alt="로고"></p>
                 <p>
                   <strong>(주)KMARKET</strong><br />
                   부산시 강남구 테헤란로 152 (역삼동 강남파이낸스센터)<br />

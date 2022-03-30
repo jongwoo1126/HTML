@@ -20,7 +20,7 @@
             </div>
             <div>
                 <div>
-                    <a href="#"><img src="./img/header_logo.png" alt="로고"/></a>
+                    <a href="#"><img src="../img/header_logo.png" alt="로고"/></a>
                     <form action="#">
                         <input type="text" name="search"/>
                         <button><i class="fa fa-search"></i></button>
@@ -85,8 +85,91 @@
                 </article>
             </aside>
             <section id="product-cart">
+                <!-- 제목, 페이지 네비게이션 -->
+                <nav>
+                    <h1>장바구니</h1>
+                    <p>
+                        HOME > <span>패션·의류·뷰티</span> > <strong>장바구니</strong>
+                    </p>
+                </nav>
+                <!-- 장바구니 상품 목록 -->
+                <section>
+                    <form action="#">
+                        <table border="0">
+                            <thead>
+                                <tr>
+                                    <th><input type="checkbox" name="all"></th>
+                                    <th>상품명</th>
+                                    <th>총수량</th>
+                                    <th>판매가</th>
+                                    <th>할인</th>
+                                    <th>포인트</th>
+                                    <th>배송비</th>
+                                    <th>소계</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="empty">
+                                    <td colspan="7">장바구니에 상품이 없습니다.</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" name="#"></td>
+                                    <td>
+                                        <article>
+                                            <a href="#"><img src="../img/thumb-sample-t2.jpg" alt="t2"></a>
+                                            <div>
+                                                <h2><a href="#">TH-블락체크 셔츠-그레이2 [면세]</a></h2>
+                                                <p>SIZE:M / COLOR:블루 1개</p>
+                                            </div>
+                                        </article>
+                                    </td>
+                                    <td>1</td>
+                                    <td>27,000</td>
+                                    <td>10%</td>
+                                    <td>270</td>
+                                    <td>2,500</td>
+                                    <td>29,000</td>
+                                </tr>
+                            </tbody>
 
-                
+                        </table>
+                        <input type="button" name="del" value="선택삭제">
+                    </form>
+
+                </section>
+
+                <!-- 장바구니 상품 전체 합계 -->
+                <div class="total">
+                    <h2>전체합계</h2>
+                    <table border="0">
+                        <tr>
+                            <td>상품수</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>상품금액</td>
+                            <td>27,000</td>
+                        </tr>
+                        <tr>
+                            <td>할인금액</td>
+                            <td>-1,000</td>
+                        </tr>
+                        <tr>
+                            <td>배송비</td>
+                            <td>2,500</td>
+                        </tr>
+                        <tr>
+                            <td>포인트</td>
+                            <td>270</td>
+                        </tr>
+                        <tr>
+                            <td>전체주문금액</td>
+                            <td>29,000</td>
+                        </tr>
+                    </table>
+                    <input type="button" name="order" value="주문하기">
+                </div>
+
             </section>
 
         </main>
@@ -99,7 +182,7 @@
                 <li><a href="#">전자금융거래약관</a></li>
             </ul>
             <div>
-                <p><img src="./img/footer_logo.png" alt="로고"></p>
+                <p><img src="../img/footer_logo.png" alt="로고"></p>
                 <p>
                   <strong>(주)KMARKET</strong><br />
                   부산시 강남구 테헤란로 152 (역삼동 강남파이낸스센터)<br />
@@ -109,7 +192,7 @@
                 </p>
                 <p>
                   <strong>고객센터</strong><br />
-                  Tel : 1234-5678 (평일 09:00~18:00)<br />
+                  Tel : 1234-56787 (평일 09:00~18:00)<br />
                   스마일클럽/SVIP 전용 : 1522-5700 (365일 09:00~18:00)<br />
                   경기도 부천시 원미구 부일로 223(상동) 투나빌딩 6층<br />
                   Fax : 051-123-4567 | Mail : kmarket@kmarket.co.kr<br />
