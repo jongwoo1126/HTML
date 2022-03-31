@@ -3,113 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <title>케이마켓::관리자메인</title>
+    <link rel="stylesheet" href="./css/style.css">
     <style>
-        /* 초기화 */
-        *{
-            margin: 0;
-            padding: 0;
-            font: normal 12px '돋움';
-        }
-
-        ul, ol{list-style: none;}
-        a{text-decoration: none; color: #111;}
-        input, textarea{outline: none;}
-        
-        #admin-wrapper{
-        width: 100%;
-        height: auto;
-        }
-
-        /* 헤더 */
-        header{
-            width: 100%;
-            height: 120px;
-            background: url(./img/admin_bg_header.jpg);
-        }
-        header > a.logo{}
-        header > p{}
-        header > p > span{}
-        header > p > a{}
-
-        /* 푸터 */
-        footer{
-            width: 100%;
-            height: 60px;
-            background: #0d3a46;
-        }
-
-        footer > .copyright{
-            color: #fff;
-        }
-        
-        /* 메인 */
-        main{
+        /* index 스타일 */
+        #index{}
+        #index > nav{
             overflow: hidden;
-            width: 1400px;
-            min-height: 600px;
+            width: 100%;
+            height: 46px;
+            margin-bottom: 16px;
+            border-bottom: 1px solid #c0c0c0;
             box-sizing: border-box;
-            margin: 0 auto;
         }
-        main > aside{
+        #index > nav > h3{
             float: left;
-            width: 270px;
-            min-height: 600px;
-            box-sizing: border-box;
-            background: url(./img/admin_bg_aside.jpg);
-            border-left: 1px solid #c0c0c0;
-        } 
-        main > section{
-            float: right;
-            width: 1130px;
-            min-height: 600px;
-            box-sizing: border-box;
-            border: 1px solid red;
-        }
-        
-        /* gnb(global navigation bar) */
-        #gnb {
-            width: 100%;
-            height: auto;
-        }
-
-        #gnb > li{
-            width: 100%;
-            min-height: 66px;
-            border-top: 1px solid #c0c0c0;
-            box-sizing: border-box;
-        }
-
-        #gnb > li:last-child{border-bottom: 1px solid #c0c0c0;}
-        #gnb > li > a{
-            display: block;
-            width: 100%;
-            height: 66px;
-            font-size: 14px;
-            font-weight: bold;
-            color: #222;
-            line-height: 66px;
-            text-indent: 12px;
-        }
-        #gnb > li > a > i{
+            line-height: 46px;
             font-size: 20px;
-            margin-right: 12px;
+            font-weight: normal;
         }
-        #gnb ol{
-            display: none;
+        #index > nav > p{
+            float: right;
+            line-height: 46px;
+        }
+        #index > nav > p > span{font-weight: bold;}
+        #index > h4{font-size: 16px;}
+        #index > table{
             width: 100%;
-            height: auto;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            border-top: 2px solid #8798a3;
+            border-collapse: collapse;
         }
-        #gnb ol > li{
-            width: 100%;
-            height: 32px;
+        #index > table tr{}
+        #index > table tr:first-child{
+            background: #fafafa;
         }
-        #gnb ol > li > a{
+        #index > table tr > td{
+            width: 20%;
+            text-align: center;
+            color: #111;
+            border: 1px solid #e5e5e5;
+            padding: 6px 6px 6px 12px;
+        }
+        #index > table tr > td > strong{
             display: block;
-            width: 100%;
-            height: 100%;
-            text-indent: 58px;
+            font-size: 16px;
+            padding-top: 10px;
         }
-        #gnb ol > li > a:hover{font-weight: bold;}
+        #index > table tr > td > span{
+            display: block;
+            padding: 16px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        #index > table tr > td > p{
+            padding: 6px;
+            overflow: hidden;
+        }
+        #index > table tr > td > p > span:nth-child(1){float: left;}
+        #index > table tr > td > p > span:nth-child(2){float: right;}
+        #index > div{
+            margin-bottom: 26px;
+            overflow: hidden;
+            width: 49%;
+            height: 100%;
+            box-sizing: border-box;
+        }
+        #index > div:nth-of-type(1){float: left;}
+        #index > div:nth-of-type(2){float: right;}
+        #index > div > h4{font-size: 16px;}
+        #index > div > article{
+            padding: 16px;
+            margin-top: 6px;
+            border: 1px solid #e5e5e5;
+            border-top: 2px solid #8798a3;
+            box-sizing: border-box;
+        }
+        #index > div > article > p{
+            line-height: 26px;
+            overflow: hidden;
+        }
+        #index > div > article > p > span{}
+        #index > div > article > p > span:nth-child(1){
+            float: left;
+            display: block;
+            width: 400px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            text-align: left;
+            overflow: hidden;
+        }
+        #index > div > article > p > span:nth-child(2){float: right;}
     </style>
     <script src="https://kit.fontawesome.com/20962f3e4b.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -118,13 +102,15 @@
 <body>
     <div id="admin-wrapper">
         <header>
-            <a href="#" class="logo"><img src="./img/admin_logo.png" alt="ADMINSTRATOR"></a>
-            <p>
-                <span>홍길동님</span> 반갑습니다.
-                <a href="#">HOME</a>
-                <a href="#">LOGOUT</a>
-                <a href="#">고객센터</a>
-            </p>
+            <div>
+                <a href="#" class="logo"><img src="./img/admin_logo.png" alt="ADMINSTRATOR"></a>
+                <p>
+                    <span>홍길동님</span>반갑습니다.
+                    <a href="#">HOME |</a>
+                    <a href="#">LOGOUT |</a>
+                    <a href="#">고객문의</a>
+                </p>
+            </div>
         </header>
 
         <main>
@@ -179,7 +165,237 @@
                     </li>
                 </ul>
             </aside>
-            <section></section>
+            <section id="index">
+                <nav>
+                    <h3>Dashboard</h3>
+                    <p>HOME > <span>main</span></p>
+                </nav>
+                <h4>쇼핑몰 운영 현황</h4>
+                <table>
+                    <tr>
+                        <td>
+                            <strong>주문건수(건)</strong>
+                            <span>131</span>
+                        </td>
+                        <td>
+                            <strong>주문금액(원)</strong>
+                            <span>1,130,000</span>
+                        </td>
+                        <td>
+                            <strong>회원가입(명)</strong>
+                            <span>1014</span>
+                        </td>
+                        <td>
+                            <strong>쇼핑몰 방문(명)</strong>
+                            <span>1014</span>
+                        </td>
+                        <td>
+                            <strong>신규게시물(건)</strong>
+                            <span>100</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>
+                                <span>PC</span>
+                                <span>60</span>
+                            </p>
+                            <p>
+                                <span>Mobile</span>
+                                <span>71</span>
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                <span>PC</span>
+                                <span>60</span>
+                            </p>
+                            <p>
+                                <span>Mobile</span>
+                                <span>71</span>
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                <span>PC</span>
+                                <span>60</span>
+                            </p>
+                            <p>
+                                <span>Mobile</span>
+                                <span>71</span>
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                <span>PC</span>
+                                <span>60</span>
+                            </p>
+                            <p>
+                                <span>Mobile</span>
+                                <span>71</span>
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                <span>PC</span>
+                                <span>60</span>
+                            </p>
+                            <p>
+                                <span>Mobile</span>
+                                <span>71</span>
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>
+                                <span>어제</span>
+                                <span>4</span>
+                            </p>
+                            <p>
+                                <span>주간</span>
+                                <span>10</span>
+                            </p>
+                            <p>
+                                <span>월간</span>
+                                <span>30</span>
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                <span>어제</span>
+                                <span>4</span>
+                            </p>
+                            <p>
+                                <span>주간</span>
+                                <span>10</span>
+                            </p>
+                            <p>
+                                <span>월간</span>
+                                <span>30</span>
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                <span>어제</span>
+                                <span>4</span>
+                            </p>
+                            <p>
+                                <span>주간</span>
+                                <span>10</span>
+                            </p>
+                            <p>
+                                <span>월간</span>
+                                <span>30</span>
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                <span>어제</span>
+                                <span>4</span>
+                            </p>
+                            <p>
+                                <span>주간</span>
+                                <span>10</span>
+                            </p>
+                            <p>
+                                <span>월간</span>
+                                <span>30</span>
+                            </p>
+                        </td>
+                        <td>
+                            <p>
+                                <span>어제</span>
+                                <span>4</span>
+                            </p>
+                            <p>
+                                <span>주간</span>
+                                <span>10</span>
+                            </p>
+                            <p>
+                                <span>월간</span>
+                                <span>30</span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+                <h4>주문 업무현황</h4>
+                <table>
+                    <tr>
+                        <td>
+                            <strong>입금대기(건)</strong>
+                            <span>100</span>
+                        </td>
+                        <td>
+                            <strong>배송준비(건)</strong>
+                            <span>100</span>
+                        </td>
+                        <td>
+                            <strong>취소요청(건)</strong>
+                            <span>100</span>
+                        </td>
+                        <td>
+                            <strong>교환요청(건)</strong>
+                            <span>100</span>
+                        </td>
+                        <td>
+                            <strong>반품요청(건)</strong>
+                            <span>100</span>
+                        </td>
+
+                    </tr>
+                </table>
+                <div>
+                    <h4>공지사항</h4>
+                    <article>
+                        <p>
+                            <span>[공지] 1주년 기념 신규가입 사은품 안내</span>
+                            <span>20-07-08 12:23</span>
+                        </p>
+                        <p>
+                            <span>[공지] 1주년 기념 신규가입 사은품 안내</span>
+                            <span>20-07-08 12:23</span>
+                        </p>
+                        <p>
+                            <span>[공지] 1주년 기념 신규가입 사은품 안내</span>
+                            <span>20-07-08 12:23</span>
+                        </p>
+                        <p>
+                            <span>[공지] 1주년 기념 신규가입 사은품 안내</span>
+                            <span>20-07-08 12:23</span>
+                        </p>
+                        <p>
+                            <span>[공지] 1주년 기념 신규가입 사은품 안내</span>
+                            <span>20-07-08 12:23</span>
+                        </p>
+                    </article>
+                </div>
+                <div>
+                    <h4>고객문의</h4>
+                    <article>
+                        <p>
+                            <span>상품이 1개 잘못 왔습니다.</span>
+                            <span>20-07-08 12:23</span>
+                        </p>
+                        <p>
+                            <span>상품이 1개 잘못 왔습니다.</span>
+                            <span>20-07-08 12:23</span>
+                        </p>
+                        <p>
+                            <span>상품이 1개 잘못 왔습니다.</span>
+                            <span>20-07-08 12:23</span>
+                        </p>
+                        <p>
+                            <span>상품이 1개 잘못 왔습니다.</span>
+                            <span>20-07-08 12:23</span>
+                        </p>
+                        <p>
+                            <span>상품이 1개 잘못 왔습니다.</span>
+                            <span>20-07-08 12:23</span>
+                        </p>
+                    </article>
+                </div>
+            </section>
         </main>
 
         <footer>

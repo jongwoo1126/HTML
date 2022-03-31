@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>케이마켓::관리자메인</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+
+        /* admin-product-list 스타일 */
+        #admin-product-list{}
+    </style>
+    <script src="https://kit.fontawesome.com/20962f3e4b.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="./js/gnb.js"></script>
+</head>
+<body>
+    <div id="admin-wrapper">
+        <header>
+            <div>
+                <a href="#" class="logo"><img src="./img/admin_logo.png" alt="ADMINSTRATOR"></a>
+                <p>
+                    <span>홍길동님</span> 반갑습니다.
+                    <a href="#">HOME</a>
+                    <a href="#">LOGOUT</a>
+                    <a href="#">고객센터</a>
+                </p>
+            </div>
+        </header>
+
+        <main>
+            <aside>
+                <ul id="gnb">
+                    <li>
+                        <a href="#"><i class="fa fa-cogs" aria-hidden="true"></i>환경설정</a>
+                        <ol>
+                            <li><a href="#">기본환경설정</a></li>
+                            <li><a href="#">배너관리</a></li>
+                        </ol>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-store" aria-hidden="true"></i>상점관리</a>
+                        <ol>
+                            <li><a href="#">판매자현환</a></li>
+                            <li><a href="#">재고관리</a></li>
+                        </ol>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-users" aria-hidden="true"></i>회원관리</a>
+                        <ol>
+                            <li><a href="#">회원현황</a></li>
+                            <li><a href="#">포인트관리</a></li>
+                            <li><a href="#">비회원관리</a></li>
+                            <li><a href="#">접속자집계</a></li>
+                        </ol>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-box-open" aria-hidden="true"></i>상품관리</a>
+                        <ol>
+                            <li><a href="./product/list.html">상품현황</a></li>
+                            <li><a href="./product/register.html">배너관리</a></li>
+                            <li><a href="#">재고관리</a></li>
+                        </ol>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-credit-card" aria-hidden="true"></i>주문관리</a>
+                        <ol>
+                            <li><a href="#">주문현황</a></li>
+                            <li><a href="#">매출현황</a></li>
+                            <li><a href="#">결제관리</a></li>
+                            <li><a href="#">배송관리</a></li>
+                        </ol>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>게시판관리</a>
+                        <ol>
+                            <li><a href="#">게시판현황</a></li>
+                            <li><a href="#">고객문의</a></li>
+                        </ol>
+                    </li>
+                </ul>
+            </aside>
+            <section id="admin-product-list">
+
+            </section>
+        </main>
+
+        <footer>
+            <p class="copyright">
+                Copyright ©kmarket.co.kr All rights reserved. KMARKET ADMINISTRATOR Version 5.4.1.2
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
